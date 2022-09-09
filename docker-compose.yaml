@@ -1,0 +1,23 @@
+version: "3.7"
+services:
+  7days:
+    image: "7days:latest"
+    ports:
+      - 26900:26900/tcp
+      - 8080-8081:8080-8081/tcp
+      - 26900-26903:26900-26903/udp
+    environment:
+      ServerName: "7days test"
+      TelnetPassword: FooBar1
+      PersistentPlayerProfiles: "true"
+      GameName: "Test Game"
+      WorldGenSeed: "Intentropycs"
+      XPMultiplier: 300
+      DropOnDeath: 0
+      ZombieMove: 0
+      ZombieMoveNight: 1
+      ZombieFeralMove: 2
+      ZombieBMMove: 3
+      BloodMoonFrequency: 30
+      BloodMoonEnemyCount: 16
+      AirDropFrequency: 0
