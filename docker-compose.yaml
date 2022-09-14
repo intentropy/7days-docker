@@ -21,3 +21,5 @@ services:
       BloodMoonFrequency: 30
       BloodMoonEnemyCount: 16
       AirDropFrequency: 0
+    volumes:
+      - "/root/7days_saves:/root/.local/share/7DaysToDie"

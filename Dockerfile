@@ -18,6 +18,11 @@ RUN \
     cd steam && \
     curl -sqL "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz" | \
         tar zxvf - && \
-    ./steamcmd.sh +login anonymous +app_update 294420 +quit
+    mkdir -p /root/.local/share/7DaysToDie && \
+    ./steamcmd.sh +login anonymous +app_update 294420 +quit && \
+    ln -s '/root/Steam/steamapps/common/7 Days to Die Dedicated Server' /7days_data && \
+    ln -s /root/.local/share/7DaysToDie /7days_saves
+
+VOLUME /root/.local/share/7DaysToDie
 
 ENTRYPOINT [ "entrypoint" ]
