@@ -7,12 +7,20 @@ services:
       - 8080-8081:8080-8081/tcp
       - 26900-26903:26900-26903/udp
     environment:
-      ServerName: "7days test"
-      TelnetPassword: FooBar1
+      ServerName: "IntentropyCS"
+      ServerDescription: "7 Days to Die game server for IntentropyCS"
+      ServerWebsiteURL: "intentropycs.com"
+      ServerLoginConfirmationText: "Welcome to IntentropyCS"
+      TelnetPassword: "FooBar1"
+      TerminalWindowEnabled: "false"
+      ServerMaxWorldTransferSpeedKiBs: 1024
+      ServerMaxPlayerCount: 16
       PersistentPlayerProfiles: "true"
-      GameName: "Test Game"
-      WorldGenSeed: "Intentropycs"
-      XPMultiplier: 300
+      GameWorld: "RWG"
+      GameName: "IntentropyCS"
+      WorldGenSeed: "IntentropyCS"
+      WorldGenSize: 8192
+      XPMultiplier: 500
       DropOnDeath: 0
       ZombieMove: 0
       ZombieMoveNight: 1
@@ -21,5 +29,10 @@ services:
       BloodMoonFrequency: 30
       BloodMoonEnemyCount: 16
       AirDropFrequency: 0
+      LootAbundance: 250
+      LandClaimExpiryTime: 91
+      LandClaimDecayMode: 2
+      Region: Oceania
+      DayNightLength: 240
     volumes:
       - "/root/7days_saves:/root/.local/share/7DaysToDie"
