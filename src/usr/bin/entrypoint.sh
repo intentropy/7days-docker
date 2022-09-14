@@ -4,5 +4,5 @@ config_7days
 ./startserver.sh -configfile=serverconfig.xml &
 while true; do
     sleep 10
-    tail -f /7days/7DaysToDieServer_Data/*.txt
+    tail -f /7days_data/7DaysToDieServer_Data/*.txt
 done
