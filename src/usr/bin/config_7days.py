@@ -31,6 +31,6 @@ if __name__ == "__main__":
                 }
 
     # unparse config and save
-    config = xml_unparse( config )
+    config = xml_unparse( config , pretty = True )
     with open( config_path , "w" ) as config_file:
         config_file.write( config )
