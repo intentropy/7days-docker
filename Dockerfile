@@ -12,7 +12,9 @@ RUN \
     dpkg --add-architecture i386 && \
     add-apt-repository multiverse -y && \
     apt update && \
-    apt install -y \
+    apt install -y --no-install-recommends \
+        libterm-readline-gnu-perl \
+        apt-utils \
         lib32gcc-s1 \
         lib32stdc++6 \
         libc6-i386 \
@@ -24,7 +26,10 @@ RUN \
         vim \
         procps \
         anacron && \
-    ACCEPT_EULA=Y apt install -y steamcmd && \
+    echo steam steam/question select "I AGREE" | debconf-set-selections && \
+    echo steam steam/license note '' | debconf-set-selections && \
+    apt install -y steamcmd && \
+    PATH="$PATH:/usr/games" && \
     steamcmd +login anonymous +app_update 294420 +quit && \
     ln -s '/root/Steam/steamapps/common/7 Days to Die Dedicated Server' /7days_data && \
     ln -s /root/.local/share/7DaysToDie /7days_saves && \
@@ -35,3 +40,4 @@ RUN \
 VOLUME /root/.local/share/7DaysToDie
 
 ENTRYPOINT [ "entrypoint" ]
+#ENTRYPOINT [ "bash" ]
