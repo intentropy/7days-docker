@@ -1,0 +1,2 @@
+deb http://debian.mirror.serversaustralia.com.au/debian/ bullseye main contrib non-free
+deb-src http://debian.mirror.serversaustralia.com.au/debian/ bullseye main
