@@ -1,6 +1,6 @@
 #!/bin/bash
 GAME_LOG='/7days_data/7DaysToDieServer_Data/output_log_*.txt'
-cd '/root/Steam/steamapps/common/7 Days to Die Dedicated Server'
+cd '/7days_data'
 cron
 echo "* * * * * cp ${GAME_LOG} /7days_saves/. >&- 2>&-" | crontab -
 config_7days
