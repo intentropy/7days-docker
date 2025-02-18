@@ -31,7 +31,7 @@ RUN \
     apt install -y steamcmd && \
     PATH="$PATH:/usr/games" && \
     steamcmd +login anonymous +app_update 294420 +quit && \
-    ln -s '/root/Steam/steamapps/common/7 Days to Die Dedicated Server' /7days_data && \
+    ln -s '/root/.local/share/Steam/steamapps/common/7 Days to Die Dedicated Server' /7days_data && \
     ln -s /root/.local/share/7DaysToDie /7days_saves && \
     ln -s /7days_data /7days
 
