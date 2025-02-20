@@ -7,7 +7,7 @@ from xmltodict  import (
         unparse as xml_unparse
         )
 
-SERVER_PATH="/root/Steam/steamapps/common/7 Days to Die Dedicated Server"
+SERVER_PATH="/7days_data"
 CONFIG_FILE="serverconfig.xml"
 
 if __name__ == "__main__":
