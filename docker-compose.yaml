@@ -1,4 +1,4 @@
-version: "3.7"
+version: "3.9"
 services:
   7days:
     image: "7days:latest"
@@ -11,25 +11,25 @@ services:
       ServerDescription: "7 Days to Die game server for IntentropyCS"
       ServerWebsiteURL: "intentropycs.com"
       ServerLoginConfirmationText: "Welcome to IntentropyCS"
-      TelnetPassword: "FooBar1"
+      TelnetPassword: "CHANGEMEORBEPWNED"
       TerminalWindowEnabled: "false"
       ServerMaxWorldTransferSpeedKiBs: 1024
-      ServerMaxPlayerCount: 16
+      ServerMaxPlayerCount: 8
       PersistentPlayerProfiles: "true"
       GameWorld: "RWG"
       GameName: "IntentropyCS"
       WorldGenSeed: "IntentropyCS"
       WorldGenSize: 8192
-      XPMultiplier: 500
+      XPMultiplier: 200
       DropOnDeath: 0
       ZombieMove: 0
       ZombieMoveNight: 1
       ZombieFeralMove: 2
       ZombieBMMove: 3
       BloodMoonFrequency: 30
-      BloodMoonEnemyCount: 16
+      BloodMoonEnemyCount: 8
       AirDropFrequency: 0
-      LootAbundance: 250
+      LootAbundance: 100
       LandClaimExpiryTime: 91
       LandClaimDecayMode: 2
       Region: Oceania
